@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>effect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body id="back">
+
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+            <div class="icons">
+                <img onclick="sun()" id="sun" class="sun" src="images/sun.png" alt="">
+                <img  onclick="moon()" id="moon" class="moon" src="images/moon.png" alt="">
+                <i class="fas fa-list-ul" onclick="showList()"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- list -->
+    <div class="list" id="list">
+        <div class="container">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- content -->
+
+    <div class="content">
+        <div class="container">
+            <div class="first">
+                <h1>I'm <span>Kate</span> Amelia</h1>
+                <p id="text">You can do any thing you can to doe before you love any one because you are very strong</p>
+                <button>Download CV</button>
+            </div>
+            <div id="container"  class="img-container">
+                <img id="parent" class="parent" src="images/pattern.png">
+                <img id="girl" onmouseover="sayed()" onmouseout="sika()" class="girl" src="images/girl.png">
+            </div>
+        </div>
+    </div>
+
+
+    <script >
+
+        function sayed(){
+            document.getElementById('girl').style.transform = 'translateX(20px)';
+            document.getElementById('parent').style.transform = 'translateY(-20px)';
+        }
+        function sika(){
+            document.getElementById('girl').style.transform = 'translateX(0px)';
+            document.getElementById('parent').style.transform = 'translateY(0px)';
+        }
+        
+        document.getElementById('sun').style.display = 'none';
+
+
+        if (document.getElementById('back').style.backgroundColor == 'gray'){
+
+            onmousedown.document.querySelectorAll('header ul li a').style.color == 'white';
+        }
+
+        function moon(){
+            document.getElementById('back').style.backgroundColor = 'gray';
+            document.getElementById('sun').style.display = 'inline';
+            document.getElementById('moon').style.display = 'none';
+            document.getElementById('text').style.color = '#fff';
+        }
+
+        function sun(){
+            document.getElementById('back').style.backgroundColor = '#edf1fd';
+            document.getElementById('sun').style.display = 'none';
+            document.getElementById('moon').style.display = 'inline';
+            document.getElementById('text').style.color = 'gray';
+        }
+
+        function showList(){
+            if (document.getElementById('list').style.display == 'inline'){
+                document.getElementById('list').style.display = 'none';
+            } else {
+                document.getElementById('list').style.display = 'inline';
+            }
+        }
+    </script>
+</body>
+</html>
